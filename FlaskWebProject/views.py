@@ -21,11 +21,7 @@ imageSourceUrl = 'https://'+ app.config['BLOB_ACCOUNT']  + '.blob.core.windows.n
 def home():
     user = current_user
     posts = Post.query.all()
-    return render_template(
-        'index.html',
-        title='Home Page',
-        posts=posts
-    )
+    return "HOME WORKING"
 
 @app.route('/new_post', methods=['GET', 'POST'])
 @login_required
