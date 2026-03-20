@@ -30,6 +30,9 @@ The application allows users to:
 https://udacitycms123-hpdjgcd2dwdsfsfz.centralindia-01.azurewebsites.net
 
 ---
+Login Credentials:
+Username: admin
+Password: (configured securely in database)
 
 ## 📂 Project Structure
 
@@ -50,7 +53,7 @@ https://udacitycms123-hpdjgcd2dwdsfsfz.centralindia-01.azurewebsites.net
 
 ![Blob Storage](screenshots/rishikesh_cms_blob_storage.png)
 
-### 🔹 SQL Database Tables
+### 🔹 Azure SQL Database Tables (Users & Posts)
 
 ![Database](screenshots/rishikesh_cms_database_tables_users.png)
 ![Database](screenshots/rishikesh_cms_database_tables_posts.png)
