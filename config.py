@@ -14,7 +14,7 @@ class Config(object):
     SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'ENTER_SQL_SERVER_USERNAME'
     SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'ENTER_SQL_SERVER_PASSWORD'
     # Below URI may need some adjustments for driver version, based on your OS, if running locally
-    SQLALCHEMY_DATABASE_URI = "mssql+pyodbc://cmsadmin:CMS4dmin@cmsrishi123.database.windows.net:1433/cms?driver=ODBC+Driver+17+for+SQL+Server"
+    SQLALCHEMY_DATABASE_URI = "sqlite:///local.db"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     ### Info for MS Authentication ###
