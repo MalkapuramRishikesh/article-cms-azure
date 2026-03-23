@@ -8,6 +8,8 @@ from flask_session import Session
 
 app = Flask(__name__)
 app.config.from_object(Config)
+# 🔥 FORCE LOCAL DB (IMPORTANT FIX)
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///local.db"
 
 # ✅ SESSION FIX
 app.config['SESSION_TYPE'] = 'filesystem'
