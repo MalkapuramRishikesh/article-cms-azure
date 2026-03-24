@@ -75,7 +75,12 @@ def login():
         if user is None or not user.check_password(form.password.data):
             print("❌ Failed Login Attempt: Invalid username or password")
             flash('Invalid username or password')
-            return render_template(...)
+            return render_template(
+                'login.html',
+                title='Sign In',
+                form=form,
+                auth_url=_build_auth_url(scopes=Config.SCOPE, state=session["state"])
+            )
     
         login_user(user, remember=form.remember_me.data)
         print(f"✅ Successful Login: User '{user.username}' logged in")
