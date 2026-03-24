@@ -28,11 +28,12 @@ The application allows users to:
 ## 🌐 Live Application
 
 https://udacitycms123-hpdjgcd2dwdsfsfz.centralindia-01.azurewebsites.net
+⚠️ Note: The deployed application link may not be accessible as the Azure student subscription has expired.
 
 ---
 Login Credentials:
 Username: admin
-Password: (configured securely in database)
+Password: admin123
 
 ## 📂 Project Structure
 
