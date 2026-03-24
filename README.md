@@ -46,29 +46,30 @@ Password: (configured securely in database)
 ## 📸 Screenshots
 
 ### 🔹 Resource Group
-
 ![Resource Group](screenshots/rishikesh_cms_resource_group.png)
 
 ### 🔹 Blob Storage (Image Upload)
-
 ![Blob Storage](screenshots/rishikesh_cms_blob_storage.png)
 
 ### 🔹 Azure SQL Database Tables (Users & Posts)
-
 ![Database](screenshots/rishikesh_cms_database_tables_users.png)
 ![Database](screenshots/rishikesh_cms_database_tables_posts.png)
 
 ### 🔹 Login Page
-
 ![Login](screenshots/rishikesh_cms_login_page_1.png)
 ![Login](screenshots/rishikesh_cms_login_page_2.png)
 
-
 ### 🔹 Home Page
-
 ![Home](screenshots/rishikesh_cms_home_page.png)
 
 ---
+
+### 🔹 Application Logs (Login Attempts)
+![Logs](screenshots/screenshot_logs.png)
+
+### 🔹 Redirect URI Configuration (MSAL)
+![Redirect URI](screenshots/screenshot_redirect_uri.png)
+![Redirect URI](screenshots/screenshot_redirect_uri_1.png)
 
 ## ⚙️ Setup Instructions
 
