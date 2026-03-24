@@ -67,6 +67,9 @@ Password: admin123
 
 ### 🔹 Application Logs (Login Attempts)
 ![Logs](screenshots/screenshot_logs_2.png)
+Both successful and unsuccessful login attempts are captured in the logs:
+- Failed login returns HTTP 200 (no redirect)
+- Successful login returns HTTP 302 followed by HTTP 200
 
 ### 🔹 Redirect URI Configuration (MSAL)
 ![Redirect URI](screenshots/screenshot_redirect_uri_2.png)
