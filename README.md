@@ -112,6 +112,15 @@ Project successfully deployed and tested on Azure.
 
 ---
 
+## ⚠️ Note on Microsoft Authentication
+
+The Azure temporary account expired after deployment.  
+Therefore, the Redirect URI configuration is demonstrated in the project code (`config.py` and `views.py`).
+
+The application was fully configured and tested earlier with Microsoft Authentication using MSAL.
+
+---
+
 ## 👨‍💻 Author
 
 Rishikesh Goud
