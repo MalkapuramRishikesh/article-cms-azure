@@ -72,7 +72,7 @@ Both successful and unsuccessful login attempts are captured in the logs:
 - Successful login returns HTTP 302 followed by HTTP 200
 
 ### 🔹 Redirect URI Configuration (MSAL)
-![Redirect URI](screenshots/screenshot_redirect_uri_2.png)
+![Redirect URI](screenshots/screenshot_redirect_uri_3.png)
 
 ## ⚙️ Setup Instructions
 
