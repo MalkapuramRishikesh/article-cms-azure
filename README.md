@@ -66,7 +66,7 @@ Password: admin123
 ---
 
 ### 🔹 Application Logs (Login Attempts)
-![Logs](screenshots/screenshot_logs.png)
+![Logs](screenshots/screenshot_logs_1.png)
 
 ### 🔹 Redirect URI Configuration (MSAL)
 ![Redirect URI](screenshots/screenshot_redirect_uri.png)
