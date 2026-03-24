@@ -66,7 +66,7 @@ Password: admin123
 ---
 
 ### 🔹 Application Logs (Login Attempts)
-![Logs](screenshots/screenshot_logs_2.png)
+![Logs](screenshots/screenshot_logs_3.png)
 Both successful and unsuccessful login attempts are captured in the logs:
 - Failed login returns HTTP 200 (no redirect)
 - Successful login returns HTTP 302 followed by HTTP 200
