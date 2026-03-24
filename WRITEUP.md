@@ -1,60 +1,107 @@
 # Write-up: Deploying a CMS Application on Azure
 
-## Analyze, choose, and justify the appropriate resource option for deploying the app
+## Introduction
+
+This project is a Flask-based Content Management System (CMS) application deployed on Microsoft Azure. The application allows users to create, edit, and manage articles with images. It integrates Azure services such as Azure App Service, Azure SQL Database, Azure Blob Storage, and Microsoft Authentication (MSAL).
+
+---
+
+## Analyze, Choose, and Justify the Appropriate Resource Option
 
 ### 🔹 Virtual Machine (VM)
 
 **1. Cost:**
-Using a Virtual Machine requires paying for compute resources continuously, even when the application is idle. Additional costs include storage, networking, and maintenance. This makes it generally more expensive compared to platform-managed services.
+Using a Virtual Machine requires continuous payment for compute resources, even when idle. Additional costs include storage, networking, and maintenance, making it more expensive.
 
 **2. Scalability:**
-Scaling in a VM setup is manual or requires additional configuration such as Virtual Machine Scale Sets. This makes it less flexible and slower to scale compared to managed services.
+Scaling must be configured manually using Virtual Machine Scale Sets, making it less flexible.
 
 **3. Availability:**
-High availability must be configured manually using availability sets or zones. The developer is responsible for ensuring uptime, backups, and failover mechanisms.
+High availability must be set up manually using availability zones or load balancers.
 
 **4. Workflow:**
-The workflow is more complex because the developer must manage OS updates, security patches, runtime environment, and server configurations. Deployment and maintenance require more effort.
+Requires manual setup of OS, runtime, dependencies, and security updates, increasing operational complexity.
 
 ---
 
 ### 🔹 Azure App Service
 
 **1. Cost:**
-Azure App Service provides a cost-effective solution with flexible pricing tiers. It supports scaling based on demand, which helps optimize cost by only using necessary resources.
+App Service provides a cost-effective solution with flexible pricing and pay-as-you-go model.
 
 **2. Scalability:**
-App Service supports automatic scaling (auto-scale) based on traffic and load. This makes it highly efficient for handling varying workloads.
+Supports automatic scaling based on traffic and load.
 
 **3. Availability:**
-It offers built-in high availability with SLA guarantees. Azure manages infrastructure, ensuring reliability and minimal downtime.
+Provides built-in high availability with SLA guarantees.
 
 **4. Workflow:**
-The workflow is simple and developer-friendly. Deployment can be done directly from GitHub, and Azure handles infrastructure, updates, and runtime management. This significantly reduces operational overhead.
+Simplifies deployment with GitHub integration and removes the need to manage infrastructure.
 
 ---
 
-### ✅ Final Choice: Azure App Service
+## ✅ Final Choice: Azure App Service
 
-Azure App Service is the most suitable choice for deploying the CMS application.
+Azure App Service is the best choice for deploying this CMS application.
 
 **Justification:**
-App Service simplifies deployment and management by removing the need to handle infrastructure manually. It provides built-in scalability, high availability, and seamless integration with GitHub. For a web application like a CMS, which requires quick deployment and minimal maintenance, App Service is the best option. It allows developers to focus on application logic instead of infrastructure management.
+It simplifies deployment, reduces operational overhead, and provides built-in scalability and availability. It allows developers to focus on application logic instead of infrastructure management.
 
 ---
 
-## Assess app changes that would change your decision
+## Application Architecture
 
-The decision to use Azure App Service could change if the application requirements become more complex.
+* **Flask Application** – Handles routing and business logic
+* **Azure SQL Database** – Stores user and article data
+* **Azure Blob Storage** – Stores uploaded images
+* **Azure Active Directory (MSAL)** – Provides Microsoft login authentication
+* **Azure App Service** – Hosts the web application
 
-For example, if the application requires:
-- Full control over the operating system
-- Custom software installations or configurations
-- Specialized networking or security setups
-- Running background services or non-web workloads
+---
+
+## Authentication (MSAL)
+
+The application uses Microsoft Authentication Library (MSAL) to enable users to sign in with their Microsoft accounts.
+
+Flow:
+
+* User clicks “Sign in with Microsoft”
+* Redirected to Microsoft login page
+* Authorization code is returned
+* Token is generated and stored in session
+* User is logged into the application
+
+---
+
+## Logging and Monitoring
+
+Application logs are captured using:
+
+* Azure App Service Log Stream
+  OR
+* Local terminal logs
+
+These logs help monitor:
+
+* Successful login attempts
+* Failed login attempts
+* Application behavior
+
+---
+
+## Assess App Changes That Would Change the Decision
+
+The decision to use Azure App Service may change if:
+
+* Full control over OS is required
+* Custom software or configurations are needed
+* Advanced networking or security setups are required
+* Non-web workloads or background services are needed
 
 In such cases, a Virtual Machine would be more appropriate.
 
-Additionally, if the application needs fine-grained control over hardware resources or specific runtime environments not supported by App Service, switching to a VM would be necessary.
+---
 
-Thus, while App Service is ideal for standard web applications, a VM becomes a better choice when deeper infrastructure control and customization are required.
+## Conclusion
+
+Azure App Service is the most suitable platform for deploying this CMS application due to its ease of use, cost efficiency, scalability, and built-in availability. It significantly reduces infrastructure management effort and allows developers to focus on building application features.
